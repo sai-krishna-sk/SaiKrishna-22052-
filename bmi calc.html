@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="mystyles.css">
+</head>
+<body style="background-image: url(cal.png); background-size: cover;">
+    <header class="header">
+        <a href="Homepage.html" class="logo"><img src="Amrita.png" width="150" height="55"></a>
+          <nav class="nav-items">
+            <a href="homepage.html">Home</a>
+        <a href="Form.html">Register</a>
+          </nav>
+        </header>
+    <div class="container3" style="height:400px ;background-color: rgb(0, 0, 0,.7);">
+        <h1>BMI Calculator</h1>
+    <label style="color: white;" for="height">Height:</label>
+    <input type="number" id="height" placeholder="Height" step="0.01">
+    <select id="heightUnit">
+        <option value="cm">Centimeters</option>
+        <option value="in">Inches</option>
+    </select><br>
+
+    <label style="color: white;" for="weight">Weight:</label>
+    <input type="number" id="weight" placeholder="Weight" step="0.01">
+    <select id="weightUnit">
+        <option value="kg">Kilograms</option>
+        <option value="lb">Pounds</option>
+    </select><br>
+
+    <button onclick="calculateBMI()">Calculate BMI</button>
+
+    <p style="color: white;">Your BMI: <span id="bmiResult">---</span></p>
+    <p style="color: white;">BMI Classification: <span id="bmiClassification">---</span></p>
+
+       
+        </div>
+        <div class="result">
+            <h2 style="color:#fff">Result:</h2>
+            <p style="color:#fff">GST Amount: <span id="gstAmount"></span></p>
+            <p style="color:#fff">Total Price (including GST): <span id="totalPrice" style="color: aliceblue;"></span></p>
+        </div>
+    </div>
+    <script type="text/javascript">
+function calculateBMI() {
+            var height = parseFloat(document.getElementById("height").value);
+            var weight = parseFloat(document.getElementById("weight").value);
+            var heightUnit = document.getElementById("heightUnit").value;
+            var weightUnit = document.getElementById("weightUnit").value;
+
+            if (heightUnit === "in") {
+                height *= 2.54; // Convert inches to meters
+            }
+
+            if (weightUnit === "lb") {
+                weight *= 0.453592; // Convert pounds to kilograms
+            }
+
+            var bmi = weight / (height ** 2);
+
+            var bmiResultElement = document.getElementById("bmiResult");
+            var bmiClassificationElement = document.getElementById("bmiClassification");
+            bmi = bmi*10000
+            bmiResultElement.textContent = bmi . toFixed(2);
+
+            if (bmi < 18.5) {
+                bmiClassificationElement.textContent = "Underweight";
+            } else if (bmi < 24.9) {
+                bmiClassificationElement.textContent = "Normal weight";
+            } else if (bmi < 29.9) {
+                bmiClassificationElement.textContent = "Overweight";
+            } else {
+                bmiClassificationElement.textContent = "Obese";
+            }
+        }
+
+    </script>
+    <div class="fotter">
+        <p style="text-align:right; color: white;"> <a class="link" href="#">Copyright © 2023 Amrita Nation. All rights reserved. By Saikrishna</a></p>
+      </div>
+</body>
+</html>

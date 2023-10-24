@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+    <title>Validation</title>
+    <link rel="stylesheet" href="mystyles.css">
+</head>
+<body style="background-image: url(val.jpg); background-size: cover;">
+    <header class="header">
+        <a href="Homepage.html" class="logo"><img src="Amrita.png" width="150" height="55"></a>
+          <nav class="nav-items">
+            <a href="homepage.html">Home</a>
+        <a href="Form.html">Register</a>
+          </nav>
+        </header>
+    <div class="center">
+        <h3 style="font-size: 70px;font-family:Arial, Helvetica, sans-serif; text-align: center;color: black; text-shadow: 0px 0px 5px powderblue;">Captcha Validation</h3>
+        <div class="container3" style="width: 300px;height: 300px;background-color: aliceblue;margin-top: 10px;">
+            <h2 style="margin-bottom: 0%;text-decoration: dotted;font-family:'Orbitron';">Captcha</h2>
+            <br>
+        <div id="captchaBackground" style="height: 250px;">
+            <div class="container3" style="width: 200px;height:fit-content;">
+          <span id="captcha" style="font-size: 30px;color: aliceblue;font-family:'Orbitron';">captcha text</span>
+        </div>
+          <br>
+          <input id="textBox" type="text" name="text" style="height: 60px;font-size: 30px;width: 200px;">
+          <br>
+          
+          <div id="buttons" style="width: 300px;height:100px;">
+            <br>
+            <input id="submit" type="submit" value="Submit" style="height: 30px;width: 100px;" href="Form.html">
+            <br><br>
+            <button id="refresh" type="submit" ><img src="recap.png" style="height: 35px;width: 35px;"></button>
+        </div>
+          <span id="output"></span>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+       let captchaText = document.querySelector('#captcha');
+let userText = document.querySelector('#textBox');
+let submitButton = document.querySelector('#submit');
+let output = document.querySelector('#output');
+let refreshButton = document.querySelector('#refresh');
+
+let alphaNums = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+let emptyArr = [];
+for(let i = 1; i <= 7; i++) {
+	emptyArr.push(alphaNums[Math.floor(Math.random() * alphaNums.length)]);
+}
+captchaText.innerHTML = emptyArr.join('');
+
+
+submitButton.addEventListener('click',  function() {
+	if(userText.value === captchaText.innerHTML) {
+		window.location.href = "form.html";
+	} else {
+		output.classList.add("redText");
+		output.innerHTML = "Incorrect, please try again";
+	}
+});
+
+refreshButton.addEventListener('click', function () {
+	userText.value = "";
+	let refreshArr = [];
+	for(let j = 1; j <= 7; j++) {
+		refreshArr.push(alphaNums[Math.floor(Math.random() * alphaNums.length)]);
+	}
+	captchaText.innerHTML = refreshArr.join('');
+	output.innerHTML = "";
+});
+    </script>
+    <div class="fotter">
+      <p style="text-align:right; color: white;"> <a class="link" href="#">Copyright © 2023 Amrita Nation. All rights reserved. By Saikrishna</a></p>
+    </div>
+</body>
+</html>

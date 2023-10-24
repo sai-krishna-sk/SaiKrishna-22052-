@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration</title>
+<link rel="stylesheet" href="mystyles.css">
+</head>
+<body style="background-image: url(https://dt19wmazj2dns.cloudfront.net/wp-content/uploads/2022/05/amrita-admission-chennai-campus.jpg); background-size: cover;">
+    <header class="header">
+        <a href="Homepage.html" class="logo"><img src="Amrita.png" width="150" height="55"></a>
+        <nav class="nav-items">
+            <a href="homepage.html">Home</a>
+            <a href="Form.html">Register</a>
+        </nav>
+      </header>
+<br><br>
+<div class="container" style="text-align: center; background-color: rgb(0, 0, 0,.7);">
+  <h1 style="color: white;text-shadow: 0px 0px 5px powderblue;">Registration</h1>
+  <p >Register to the workshop that interests you</p>
+  <form>
+	<p class="p1">Name:</p>
+	<input class="type1" type="text" placeholder="Name" name="username" required>
+    <br>
+    <p class="p1">Roll Number: </p>
+    <input class="type1" type="text" placeholder="Roll Number" name="roll_no" required>
+	<br>
+    <p class="p1">Email: </p>
+	<input class="type1" type="text" placeholder="Email id" name="email_id" required>
+	<br>
+    <p class="p1">Number: </p>
+    <input class="type1" placeholder="Number" type="text" name="number" pattern="^\d{10}$" required >
+	<br>
+	<p class="p1">Password: </p>
+	<input class="type1" type="password" placeholder="Password" name="user-pwd" id="userpassword" required>
+	<br>
+    <p class="p1">Date of Birth: </p>
+    <input type="date" id="dob" name="dob" class="type1" required>
+<br>
+    <p class="p1">Department: </p>
+    <select name="Department" class="type2" id="Department" required>
+        <option value="select">select</option>
+        <option  value="CSE">CSE</option>
+        <option value="CSE-AI">CSE-AI</option>
+        <option value="CSE-CYS">CSE-CYS</option>
+        <option value="ECE">ECE</option>
+        <option value="CCE">CCE</option>
+        <option value="MECH">MECH</option>
+        <option value="ARE">ARE</option>
+    </select>
+        
+    <br>
+    <p class="p1">Year of study: </p>
+    <select name="year-of-study" class="type2" id="year_of_study" required>
+        <option value="select">select</option>
+        <option  value="1st year">1st year</option>
+        <option value="2st year">2st year</option>
+        <option value="3st year">3st year</option>
+        <option value="4st year">4st year</option>
+        
+    </select>
+<br>
+    <p class="p1">Workshop: </p>
+    <select name="Workshop" class="type2" id="Workshop" required>
+        <option value="select">select</option>
+        <option  value="CyberWise">CyberWise</option>
+        <option value="Crafting the Web">Crafting the Web</option>
+        <option value="CodeCraft">CodeCraft</option>
+
+    </select>
+
+
+
+    <br>
+    <p class="p1">Gender: </p>
+    <input type="radio" name="gender" id="male">
+    <label style="color: white;" for="male">Male</label>
+    <input type="radio" name="gender" id="femal">
+    <label style="color: white;" for="female">female</label>
+    <input type="radio" name="gender" id="other">
+    <label style="color: white;" for="other">others</label>
+
+    <br>
+    <p class="p1">Address: </p>
+	<input class="type1" type="text" placeholder="Address" name="address" required>
+	<br>
+
+    <p class="p1">City: </p>
+	<input class="type1" type="text" placeholder="City" name="city" required>
+	<br>
+    <p class="p1">State: </p>
+    <select id="state" name="state" class="type2" required>
+        <option value="">Select State</option>
+        <option value="Andhra Pradesh">Andhra Pradesh</option>
+        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+        <option value="Assam">Assam</option>
+        <option value="Bihar">Bihar</option>
+        <option value="Chhattisgarh">Chhattisgarh</option>
+        <option value="Goa">Goa</option>
+        <option value="Gujarat">Gujarat</option>
+        <option value="Haryana">Haryana</option>
+        <option value="Himachal Pradesh">Himachal Pradesh</option>
+        <option value="Jharkhand">Jharkhand</option>
+        <option value="Karnataka">Karnataka</option>
+        <option value="Kerala">Kerala</option>
+        <option value="Madhya Pradesh">Madhya Pradesh</option>
+        <option value="Maharashtra">Maharashtra</option>
+        <option value="Manipur">Manipur</option>
+        <option value="Meghalaya">Meghalaya</option>
+        <option value="Mizoram">Mizoram</option>
+        <option value="Nagaland">Nagaland</option>
+        <option value="Odisha">Odisha</option>
+        <option value="Punjab">Punjab</option>
+        <option value="Rajasthan">Rajasthan</option>
+        <option value="Sikkim">Sikkim</option>
+        <option value="Tamil Nadu">Tamil Nadu</option>
+        <option value="Telangana">Telangana</option>
+        <option value="Tripura">Tripura</option>
+        <option value="Uttar Pradesh">Uttar Pradesh</option>
+        <option value="Uttarakhand">Uttarakhand</option>
+        <option value="West Bengal">West Bengal</option>
+      </select>
+
+      <div class="g-recaptcha" data-sitekey="6LdB3zkoAAAAAIBK2WlaMyE1ItPMPQPVNJra27ZA"></div>
+
+<br>
+	<br>
+	<input class="btn" type="submit" value="Submit">
+	</form>
+	<br>
+<br>
+
+<br>
+</div>
+<br><br>
+<div class="fotter">
+    <p style="text-align:right; color: white;"> <a class="link" href="#">Copyright © 2023 Amrita Nation. All rights reserved. By Saikrishna</a></p>
+  </div>
+</body>
+</html>

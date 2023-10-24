@@ -1,0 +1,261 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+background-image:url("abcd.avif");
+background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  cursor: url(asd1.png), pointer;
+}
+h1{
+        font-size: 72px;
+        background: -webkit-linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+.container {
+    max-width: 1000px;
+    padding: 20px;
+    background-color: RGB(255, 255, 255,0.5);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: auto;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:black;
+    padding:7px;
+  }
+.header .logo {
+    font-size: 2px;
+    font-family: 'Sriracha', cursive;
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+  }
+  .nav-items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    margin-right: 20px;
+  }
+  .nav-items a {
+    text-decoration: none;
+    color: white;
+    padding: 2px 5px;
+  }
+  .btn-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(255, 255, 255,0.3);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 16px;
+    text-decoration: none;
+  }
+  .btn:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+.link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+    }
+  
+.container1{
+    display: block;
+    background-image: url("cys3.jpg");
+    background-size: contain;
+    width: 750px;
+    height: 500px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    cursor: url(asd1.png), pointer;
+}
+h3{
+    color: #ffffff;
+}
+.cont2{
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url("csw.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 600px;
+    height: 400px;
+    cursor: url(asd1.png), pointer;
+}
+.cont3{
+    background-image: url("calc.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    height: 400px;
+    cursor: url(asd1.png), pointer;
+}
+.cont4{
+    background-image: url("reg.avif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left:100px;
+    width: 600px;
+    height: 400px;
+    cursor: url(asd1.png), pointer;
+}
+.container3{
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 50px;
+    background-color: black;
+    display: block;
+    width:600px;
+    height: 1600px;
+    cursor: url(asd1.png), pointer;
+}
+label[for="honeypot"], #honeypot {
+    display: none;
+    visibility: hidden;
+  }
+  #cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;  
+    max-width: 916px;
+    width: calc(100% - 20px);
+  }
+  
+  #cards:hover > .card::after {
+    opacity: 1;
+  }
+  
+  .card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    height: 260px;
+    flex-direction: column;
+    position: relative;
+    width: 300px;  
+  }
+  
+  .card:hover::before {
+    opacity: 1;
+  }
+  
+  .card::before,
+  .card::after {
+    border-radius: inherit;
+    content: "";
+    height: 100%;
+    left: 0px;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    transition: opacity 500ms;
+    width: 100%;
+  }
+  
+  .card::before {
+    background: radial-gradient(
+      800px circle at var(--mouse-x) var(--mouse-y), 
+      rgba(255, 255, 255, 0.06),
+      transparent 40%
+    );
+    z-index: 3;
+  }
+  
+  .card::after {  
+    background: radial-gradient(
+      600px circle at var(--mouse-x) var(--mouse-y), 
+      rgba(255, 255, 255, 0.4),
+      transparent 40%
+    );
+    z-index: 1;
+  }
+  
+  .card > .card-content {
+    background-color: var(--card-color);
+    border-radius: inherit;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    inset: 1px;
+    padding: 10px;
+    position: absolute;
+    z-index: 2;
+  }  
+
+  .intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 600px;
+    background:linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url(https://dt19wmazj2dns.cloudfront.net/wp-content/uploads/2022/05/amrita-admission-chennai-campus.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .intro h1 {
+  height: 100px;
+    font-family: sans-serif;
+    font-size: 60px;
+    color: white ;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+   
+  }
+
+  .intro p {
+    font-size: 20px;
+    color: black;
+    text-transform: uppercase;
+    margin: 20px 0;
+  }
+
+  .intro button {
+    background-color: #5edaf0;
+    color: #000;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4)
+  }
+  li {
+font-size: 18px;
+}
+.fotter {
+    display: block;
+    justify-content: space-between;
+    align-items: right;
+    background: linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(11, 132, 145) 91.1%);
+    
+    padding:12px;
+  }
+  p{
+    color: white;
+  }

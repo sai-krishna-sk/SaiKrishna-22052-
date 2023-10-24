@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+    <title>Mouse Events</title>
+    <link rel="stylesheet" href="mystyles.css">
+</head>
+<body style="background-image: url(cys.jpg); background-size: cover;">
+  <header class="header">
+    <a href="Homepage.html" class="logo"><img src="Amrita.png" width="200px" height="55px"></a>
+      <nav class="nav-items">
+        <a href="homepage.html">Home</a>
+        <a href="Form.html">Register</a>
+      </nav>
+    </header>
+    <div class="container3" style="height: fit-content;background-color:#000000;margin-top:50px ; min-width: 60%;">
+        <img src="acn.jpeg" style="border-radius: 25px;margin-top: 20px;">
+<h1 data-value="Amrita CyberNation" style="font-family: 'Space Mono', monospace;" onmousedown="myfunction();">Amrita CyberNation</h1>
+</div>
+<br>
+<div class="container3" style="height: 386.04px;background-color:#000000;margin-top:50px ;width: 600px;margin-left: auto;margin-right: auto; ">
+<div id="cards" style="width: 600px;">
+    <div class="card" style="width: 500px;height: 229px;background-color:#000000;border-radius:25px;margin-top: 20px;margin-left: auto;margin-right: auto;">
+        <img src="eh.jpg" style="border-radius: 25px;width: 500px;height: 229px;margin-left: auto;margin-right: auto;">
+      <div class="card-content">
+        <div class="card-image">
+            
+          <i class="fa-duotone fa-apartment"></i>
+        </div>
+        
+      </div>
+      
+    </div>
+    <h1 style="font-family: 'Space Mono', monospace;text-shadow: #fff;color: #000000;margin-left: auto;margin-right: auto ;" onmousedown="myfunction()" >Ethical Hacker</h1>
+    </div>
+    
+</div>
+<script type="text/javascript">
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+let interval = null;
+
+document.querySelector("h1").onmouseover = event => {  
+  let iteration = 0;
+  
+  clearInterval(interval);
+  
+  interval = setInterval(() => {
+    event.target.innerText = event.target.innerText
+      .split("")
+      .map((letter, index) => {
+        if(index < iteration) {
+          return event.target.dataset.value[index];
+        }
+      
+        return letters[Math.floor(Math.random() * 26)]
+      })
+      .join("");
+    
+    if(iteration >= event.target.dataset.value.length){ 
+      clearInterval(interval);
+    }
+    
+    iteration += 1 / 4;
+  }, 30);
+}
+function myfunction(){
+    window.location.href = "validation.html";
+}
+document.getElementById("cards").onmousemove = e => {
+  for(const card of document.getElementsByClassName("card")) {
+    const rect = card.getBoundingClientRect(),
+          x = e.clientX - rect.left,
+          y = e.clientY - rect.top;
+
+    card.style.setProperty("--mouse-x", `${x}px`);
+    card.style.setProperty("--mouse-y", `${y}px`);
+  };
+}
+</script>
+  <p style="text-align:right; color: white;"> <a class="link" href="#">Copyright © 2023 Amrita Nation. All rights reserved. By Saikrishna</a></p>
+</body>
+</html>
